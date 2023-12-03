@@ -20,7 +20,8 @@ std::vector<std::string> split(const std::string &s, char delim) {
 int main() {
     ifstream in("input");
 
-    int ans = 0;
+    int ans1 = 0;
+    int ans2 = 0;
     int cur = 1;
     string line;
 
@@ -42,12 +43,14 @@ int main() {
             }
         }
 
-        if (maxRed <= 12 && maxGreen <= 13 && maxBlue <= 14) ans += cur;
+        if (maxRed <= 12 && maxGreen <= 13 && maxBlue <= 14) ans1 += cur;
+        ans2 += maxRed * maxGreen * maxBlue;
 
         cur++;
     }
 
-    cout << ans;
+    cout << "Part 1: " << ans1 << endl;
+    cout << "Part 2: " << ans2 << endl;
 
     return 0;
 }
