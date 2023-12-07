@@ -26,7 +26,7 @@ int main() {
     string line;
 
     while (getline(in, line)) {
-        line = line.substr(8);
+        line = split(line, ':')[1];
         int maxRed = 0, maxGreen = 0, maxBlue = 0;
 
         vector<string> games = split(line, ';');
